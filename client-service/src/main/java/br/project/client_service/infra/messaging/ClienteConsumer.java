@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ClienteConsumer {
 
-    @RabbitListener(queues = "{queue.name}")
+    @RabbitListener(queues = "cliente.queue")
     public void consumirMensagem(String message){
         System.out.println("Mensagem recebida: " + message);
     }
